@@ -1,249 +1,1929 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="OUTPUT">
-      <div class="div">
-        <div class="overlap">
-          <div class="our-crew">The Crew</div>
-          <p class="samples-will-show-yo">
-            Our dynamic team fuses creativity, efficiency, and talent to deliver innovative solutions designed for the
-            evolving needs of modern businesses.
-          </p>
-          <div class="karsten">
-            <img class="img" src="img/karsten.png" />
-            <div class="name"><div class="text-wrapper">Karsten Held</div></div>
-            <div class="frame"><div class="sign-up">Contact</div></div>
-          </div>
-          <div class="samuel">
-            <img class="img" src="img/userpic-1.png" />
-            <div class="name"><div class="text-wrapper">Samuel Gross</div></div>
-            <div class="frame"><div class="sign-up">Contact</div></div>
-          </div>
-          <div class="matti">
-            <img class="img" src="img/userpic.png" />
-            <div class="brian-oakman-wrapper"><div class="brian-oakman">Matthias Grosser</div></div>
-            <div class="frame"><div class="sign-up">Contact</div></div>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Our team, with 20 years of experience,
+specializes in leveraging Microsoft Copilot, Azure AI Builder, Power Platform, and SharePoint to their fullest. We commit significant time to deeply understanding your requirements, unlocking the platforms' full potential for you." />
+  <meta name="keywords" content="WhizzyApps, SharePoint, M365, AI, Power Apps" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="public/images/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" href="public/images/favicon/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="public/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="public/images/favicon/manifest.webmanifest" />
+
+  <title>WhizzyApps</title>
+
+  <link rel="stylesheet" href="public/css/tailwind/tailwind-inuse.css" />
+  <link rel="stylesheet" href="public/css/style.css" />
+
+  <script src="public/js/main.js"></script>
+  <script src="public/js/scroll-handler.js" defer></script>
+  <script src="public/js/smooth-scroll.js" defer></script>
+  <script src="public/js/copy.js" defer></script>
+  <script src="public/js/popup.js" defer></script>
+</head>
+
+<body class="">
+  <!-- °°  Popup -->
+
+  <div id="universal-popup" class="popup-hidden">
+
+
+    <div class="popup-elements"><button class="prev-btn nav-ani-nextprev">
+        &#8249; </button>
+
+      <div class="popup-content relative">
+
+      </div>
+      <div class="cls-btn-wrapper">
+
+        <div class="circCont close-btn">
+          <button class="circle fromMiddle" data-animation="magnify">
+            <span></span>
+          </button>
+        </div><button class="next-btn nav-ani-nextprev">&#8250;</button>
+        <div class="cls-btn-plchldr"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- °°  Navigation -->
+
+  <section class="navigation old-fire-nav">
+    <nav class="py-3 z-10 spacing">
+      <div class="navi-elements flex items-center justify-end">
+        <a class="svg-logo old-fire-svg" href="index.html" aria-label="Go to Home">
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            viewBox="0 0 200 33.87">
+            <polygon points="29.13 .06 29.13 .06 29.13 .06 29.13 .06" />
+            <path
+              d="M38.52,10.28c-1.7.2-3.32.9-4.64,2.01-.98.82-1.8,1.86-2.36,3.1l-8.06,17.6c4.45,2.04,9.71.08,11.75-4.37l8.06-17.6c-1.54-.7-3.18-.93-4.74-.74Z" />
+            <path
+              d="M29.13.06c-1.7.2-3.32.9-4.64,2.01-.98.82-1.8,1.86-2.36,3.1,0,0-12.73,27.83-12.73,27.83,1.54.7,3.18.93,4.74.74,1.7-.2,3.32-.9,4.64-2.01.98-.82,1.8-1.86,2.36-3.1,0,0,12.73-27.83,12.73-27.83-1.54-.7-3.18-.93-4.74-.74Z" />
+            <path
+              d="M11.75,18.42L19.8.81c-4.45-2.04-9.71-.08-11.75,4.37L0,22.79c1.54.7,3.17.93,4.74.74,1.71-.2,3.32-.9,4.64-2.01.98-.82,1.8-1.86,2.37-3.1Z" />
+            <path
+              d="M137.57,10.13c-2.15,4.32-4.35,8.64-6.58,12.95-.13-4.32-.26-8.64-.39-12.95h-29.29c-.31,1.04-.62,2.07-.94,3.11h7.61c-4.01,4.1-8.09,8.19-12.24,12.29,1.58-5.13,3.14-10.26,4.67-15.4h-4.44c-1.68,5.54-3.4,11.08-5.15,16.61h32.57c.27-1.03.54-2.05.81-3.08h-7.99l10.28-10.48c.22,4.52.45,9.04.68,13.56h1.44c-1.03,2.2-2.96,3.69-5.26,3.69-.59,0-1.18-.03-1.7-.29-.47,1.08-.94,2.16-1.42,3.24.9.39,2.11.49,2.9.49,3.9,0,6.58-2.17,10.14-8.42,2.92-5.11,5.78-10.21,8.58-15.32h-4.28ZM102.99,23.67l10.43-10.43h0c2.54,0,5.08,0,7.63,0-3.35,3.48-6.75,6.95-10.19,10.43h-7.86Z" />
+            <path
+              d="M164.85,9.84c-2.75,0-5.6.81-7.55,1.36-.95,4.34-1.93,8.69-2.92,13.03-.63-6.37-1.25-12.75-1.87-19.12h-5.01c-4.05,7.21-8.22,14.42-12.53,21.63h4.81c.95-1.71,1.89-3.41,2.82-5.12h6.92c.16,1.71.31,3.41.47,5.12h3.82c-.53,2.3-1.07,4.6-1.61,6.9h4.49c.52-2.28,1.04-4.56,1.56-6.83,1.03.19,2.06.36,2.94.36,6.06,0,8.72-4.21,9.68-8.94,1.34-6.7-2.06-8.39-6.01-8.39ZM144.51,18.1c1.5-2.84,2.98-5.68,4.44-8.52.11,2.84.23,5.68.34,8.52h-4.78ZM166.4,18.2c-.67,3.27-2.39,5.34-5.16,5.34-.65,0-1.39-.1-2.18-.36.7-3.16,1.4-6.33,2.08-9.49.99-.26,1.86-.32,2.57-.32,2.5,0,3.35,1.72,2.7,4.83Z" />
+            <path
+              d="M180.53,9.84c-2.75,0-5.58.81-7.51,1.36-1.47,7.48-3,14.96-4.59,22.44h4.49c.47-2.28.94-4.56,1.4-6.83,1.03.19,2.07.36,2.95.36,6.06,0,8.62-4.21,9.47-8.94,1.18-6.7-2.25-8.39-6.21-8.39ZM182.27,18.2c-.6,3.27-2.27,5.34-5.04,5.34-.65,0-1.39-.1-2.19-.36.63-3.16,1.25-6.33,1.86-9.49.98-.26,1.85-.32,2.56-.32,2.5,0,3.39,1.72,2.81,4.83Z" />
+            <path
+              d="M194.86,13.37c1.54,0,3.32.45,3.98.78.39-1.13.77-2.27,1.16-3.4-1.1-.49-2.52-.94-4.79-.94-3.86,0-6.62,1.52-7.27,5.15-.51,2.88,1.82,3.92,3.97,4.92,1.36.65,2.57,1.2,2.38,2.33-.22,1.23-1.34,1.52-2.71,1.52-1.83,0-4-.71-4.73-.97-.45,1.12-.89,2.25-1.34,3.37.92.52,3.24,1.04,5.37,1.04,4.68,0,7.17-1.98,7.76-5.44.44-2.88-1.88-3.76-3.75-4.53-1.49-.62-2.91-1.26-2.72-2.4.18-1.1,1.35-1.42,2.7-1.42Z" />
+            <path
+              d="M89.1,9.75c-1.44,0-3.24.26-5.36.94.6-1.86,1.2-3.71,1.79-5.57h-4.44c-2.34,7.21-4.74,14.42-7.19,21.63h4.58c1.4-4.2,2.78-8.4,4.14-12.6,1.13-.36,2.44-.65,3.47-.65,1.35,0,2.27.39,1.57,2.62-1.13,3.54-2.27,7.08-3.42,10.62h4.74c1.22-3.81,2.42-7.62,3.6-11.43,1.23-3.98-.26-5.57-3.48-5.57Z" />
+            <path d="M102,5.12h-4.41c-.32,1.05-.63,2.09-.95,3.14h4.43c.31-1.05.62-2.09.93-3.14Z" />
+            <path
+              d="M75.58,5.12c-1.81,5.44-3.65,10.87-5.53,16.31,0,0,0,.01,0,.02.04-5.44.09-10.88.14-16.32h-4.32c-2.38,5.44-4.79,10.88-7.26,16.32,0,0,0-.01,0-.02.62-5.44,1.25-10.87,1.86-16.31h-3.75c-.86,7.21-1.72,14.42-2.59,21.63h5.93c2.17-4.88,4.3-9.76,6.4-14.64-.11,4.88-.21,9.76-.31,14.64h5.93c2.48-7.21,4.9-14.42,7.26-21.63h-3.75Z" />
+          </svg>
+        </a>
+
+        <div class="lg:hidden">
+          <button class="flex navbar-burger hover:text-gray-600 focus:outline-none text-white">
+            <svg class="h-4 w-4" fill="currentColor " viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- °°  Burger Hidden -->
+
+        <ul
+          class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12 ul-link-animation-w ul-link-animation-b transformation-active">
+          <li>
+            <a class="old-fire-a text-sm text-white" href="#about" aria-label="Scroll to About Section">
+              About
+            </a>
+          </li>
+          <li>
+            <a class="old-fire-a text-sm text-white" href="#services" aria-label="Scroll to Services Section">
+              Services
+            </a>
+          </li>
+          <li>
+            <a class="old-fire-a text-sm text-white" href="#solutions" aria-label="Scroll to Solutions Section">
+              Solutions
+            </a>
+          </li>
+          <li>
+            <a class="old-fire-a text-sm text-white" href="#philosophy" aria-label="Scroll to Philosophy Section">
+              Philosophy
+            </a>
+          </li>
+          <li>
+            <a class="old-fire-a text-sm text-white" href="#trainee" aria-label="Scroll to Trainee program Section">
+              Trainee program
+            </a>
+          </li>
+        </ul>
+        <a class="trigger old-fire-button hidden lg:block px-6 text-sm font-bold border rounded text-white py-2 border-white slide-fill-w slide-fill-b"
+          data-type="html" data-src="contact.html" aria-label="Contact Information">
+          Contact Us
+        </a>
+      </div>
+    </nav>
+
+    <!-- °°  Mobile Nav -->
+
+    <div class="hidden navbar-menu fixed top-0 right-0 bottom-0 z-50">
+      <div class="navbar-backdrop fixed inset-0 bg-blue-900 opacity-50"></div>
+      <nav class="relative flex flex-col py-7 px-8 w-full h-full bg-white border-r overflow-y-auto">
+        <div class="flex items-center justify-end mb-8">
+          <button class="navbar-close circle fromMiddle" data-animation="magnify">
+            <span></span>
+          </button>
+        </div>
+        <div>
+          <ul>
+            <li class="mb-1">
+              <a class="block p-4 text-sm font-semibold text-blue-500 rounded" href="#about"
+                aria-label="Scroll to About Section">
+                About
+              </a>
+            </li>
+            <li class="mb-1">
+              <a class="block p-4 text-sm font-semibold text-blue-500 rounded" href="#services"
+                aria-label="Scroll to Services Section">
+                Services
+              </a>
+            </li>
+            <li class="mb-1">
+              <a class="block p-4 text-sm font-semibold text-blue-500 rounded" href="#solutions"
+                aria-label="Scroll to Solutions Section">
+                Solutions
+              </a>
+            </li>
+
+            <li>
+              <a class="block p-4 text-sm font-semibold text-blue-500 rounded" href="#philosophy"
+                aria-label="Scroll to Philosophy Section">
+                Philosophy
+              </a>
+            </li>
+
+            <li class="mb-1">
+              <a class="block p-4 text-sm font-semibold text-blue-500 rounded" href="#trainee"
+                aria-label="Scroll to Trainee program Section">
+                Trainee program
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <div class="pt-6">
+            <a class="trigger block px-6 py-2 mb-2 text-sm text-center text-blue-500 font-bold leading-loose border border-blue-500 hover:border-blue-500 hover:bg-blue-500 hover:text-white rounded"
+              data-type="html" data-src="contact.html" href="#" aria-label="Contact Information">
+              Contact Us
+            </a>
           </div>
         </div>
-        <div class="overlap-group">
-          <div class="rectangle"></div>
-          <div class="rectangle-2"></div>
-          <img class="frame-2" src="img/frame-23.svg" />
-          <div class="frame-3">
-            <div class="frame-4">
-              <div class="text-wrapper-2">What we offer!</div>
-              <p class="we-have-created-a-ne">
-                Offering expert solutions in Power Apps &amp; Power Platform development, M365 Governance Strategy
-                Consulting, and SharePoint Enterprise Solutions to streamline and secure your business operations.
+      </nav>
+    </div>
+  </section>
+
+
+
+
+  <!-- °°  Anfangs-content-mit Animation -->
+
+
+
+
+  <div class="line-top"></div>
+
+  <section class="gradient-background">
+    <div class="bg-full-overlay">
+      <div class="bg-ani">
+        <div class="md:h-screen flex flex-col justify-center items-center  mouse-pos">
+          <div class="hero justify-center flex items-center">
+            <div class="hero-text-section lg:w-11/12 justify-center items-center flex">
+              <div class="hero-text-container lg:pr-4 lg:w-7/12 items-center">
+                <h1 class="hero-h text-white lg:pt-6 leading-none mobile-text">
+                  Simplify complexity! With streamlined solutions for M365
+                  and SharePoint
+                </h1>
+                <p class="balance hero-p lg:w-11/12 pt-6 pb-4 leading-loose text-white mobile-text">
+                  Our goal is to create apps that deserve to be called
+                  &apos;whizzy&apos;. Our approach simplifies complex issues
+                  throughintelligent, user-friendly interfaces while embedding
+                  expertknowledge into well-designed backends and processes.
+                </p>
+				<!--
+                <button class="lg:w-7/12 lg:px-0 pt-6 lg:pb-6 px-6 w-full flex flex-wrap">
+                  <a class="pulse-yellow w-full py-3 text-sm font-bold leading-loose rounded transition bg-yellow-500"
+                    href="#solutions" aria-label="See ou products">
+                    Take a look
+                  </a>
+                </button>
+				-->
+              </div>
+              <div class="hero-svg lg:p-8 lg:w-3/12 logo-pulse mobile-mt-big">
+                <img class="max-size object-cover hero-img" src="public/images/svg/icon-white-whizzy.svg"
+                  alt="WhizzyApps Logo" />
+              </div>
+            </div>
+          </div>
+          <div><a class="mouse mouse-scroll" href="#about" aria-label="scroll down">
+
+            </a></div>
+        </div>
+
+
+        <div id="about" class="lg:mb-40 pt-12">
+          <div class="relative container px-4 mx-auto pb-32">
+            <div class="mx-auto mb-12 lg:mb-32 max-w-5xl text-center">
+              <h2 class="intro-hero text-white font-heading text-4xl leading-tight mt-10 mb-4 balance mobile-text">
+                Transforming M365 into your ultimate productivity powerhouse
+              </h2>
+              <p class="intro-hero-sub mb-6 text-lg text-white md:px-24 mobile-text mobile-mt-2">
+                Our team, with 20 years of experience, specializes
+                inleveraging Microsoft Copilot, Azure AI Builder,
+                PowerPlatform, and SharePoint to their fullest. We
+                commitsignificant time to deeply understanding your
+                requirements,unlocking the platforms&apos; full potential for
+                you.
               </p>
             </div>
-            <div class="frame-5">
-              <div class="about">
-                <img class="heart" src="img/heart-2.svg" />
-                <p class="new-design">Power Apps &amp; <br />Power Platform development</p>
-                <p class="we-have-created-a-ne">
-                  Elevate your business with our specialized Power Apps and Power Platform development services. We
-                  transform complex challenges into user-friendly solutions.
-                </p>
-              </div>
-              <div class="about">
-                <img class="heart" src="img/heart-1.svg" />
-                <div class="new-design">SharePoint Enterprise Solutions</div>
-                <p class="we-have-created-a-ne">
-                  Enhance your business operations with our SharePoint Enterprise Solutions. We offer professional
-                  services focused on efficiency and collaboration.
-                </p>
-              </div>
-              <div class="about-2">
-                <img class="heart" src="img/heart.svg" />
-                <div class="new-design">M365 Governance<br />Strategy Consulting</div>
-                <p class="we-have-created-a-ne">
-                  Maximize efficiency and security with our expert M365 Governance Strategy Consulting.Tailored
-                  solutions to align your business with best practices in Microsoft 365 management.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="frame-6">
-            <p class="a-high-quality-solut">
-              Choose a free 30-minute consultation to explore our services, or opt for an in-depth 1 hour 30-minute
-              session for €350.
-            </p>
-            <div class="sign-up-wrapper"><div class="sign-up-2">Schedule Your Session</div></div>
-            <div class="frame-wrapper">
-              <div class="div-wrapper"><div class="sign-up-3">Learn More</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="overlap-2">
-          <div class="frame-7">
-            <div class="black"><img class="logo" src="img/logo.png" /></div>
-            <div class="navbar">
-              <div class="text-wrapper-3">About</div>
-              <div class="text-wrapper-3">Services</div>
-              <div class="text-wrapper-3">Products</div>
-              <div class="text-wrapper-3">Vibe</div>
-              <div class="text-wrapper-3">Trainees</div>
-              <div class="text-wrapper-3">Contacts</div>
-            </div>
-            <div class="frame-8"><div class="sign-up-4">Book your consulting</div></div>
-          </div>
-          <img class="whizzyapps-icon" src="img/whizzyapps-icon-1.svg" />
-        </div>
-        <div class="frame-9">
-          <p class="you-have-the-design">Great things begin in a whizzy way</p>
-          <p class="we-haven-t-forgotten">
-            Join us in shaping a smarter, more efficient, and lively future. Be part of a community pushing the
-            boundaries of what’s possible.
-          </p>
-          <div class="book-button"><div class="sign-up-5">Book Your Consultation Today</div></div>
-        </div>
-        <img class="construct" src="img/construct.svg" />
-        <img class="frame-10" src="img/frame-63.svg" />
-        <div class="frame-11">
-          <img class="bg-phil" src="img/bg-phil.png" />
-          <div class="frame-12">
-            <div class="text-wrapper-4">Get Some Fresh Air</div>
-            <p class="the-most-important-p">
-              We&#39;re a band of passionate individuals from all around the world, redefining work and life. Ready to
-              learn and grow from diverse life situations?
-            </p>
-          </div>
-        </div>
-        <div class="overlap-3">
-          <div class="group">
-            <div class="overlap-4">
-              <div class="laptop">
-                <div class="overlap-5">
-                  <img class="macbook-pro" src="img/macbook-pro.png" />
-                  <div class="line">
-                    <div class="overlap-group-2">
-                      <div class="line-2"></div>
-                      <img class="line-3" src="img/line-2.svg" />
-                      <img class="line-4" src="img/line.svg" />
-                    </div>
-                    <img class="line-5" src="img/line-1.png" />
+            <div class="-mb-8 lg:-mb-64">
+              <div class="flex flex-wrap -mx-4 -mb-8">
+                <div class="w-full lg:w-1/3 px-4 mb-8">
+                  <div class="box-up text-center rounded p-12 bg-blue-200 mobile-text-box">
+                    <h3 class="text-2xl font-heading pt-6 text-white mb-5">
+                      SharePoint
+                    </h3>
+                    <p class="text-lg text-white pb-6 leading-relaxed">
+                      Building SharePoint solutions since 2013, we have a
+                      deepunderstanding of permissions, design patterns,
+                      do&apos;s anddont&apos;s, web part development and
+                      automation using thePnP PowerShell Module and Power
+                      Automate.
+                    </p>
+                  </div>
+                </div>
+                <div class="box-down w-full lg:w-1/3 px-4 mb-8">
+                  <div class="text-center rounded p-12 bg-blue-200 mobile-text-box">
+                    <h3 class="text-2xl font-heading pt-6 text-white mb-5">
+                      Power Platform
+                    </h3>
+                    <p class="text-lg text-white pb-6 leading-relaxed">
+                      Creating simple Power Apps is easy; crafting complexones
+                      is challenging. We know the limits of the platformand
+                      can deliver outstanding, user-friendly apps thathelp
+                      your people get their job done in no time.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-full lg:w-1/3 px-4 mb-8">
+                  <div class="box-up text-center rounded p-12 bg-blue-200 mobile-text-box">
+                    <h3 class="text-2xl font-heading pt-6 text-white mb-5">
+                      Copilot & AI Builder
+                    </h3>
+                    <p class="text-lg text-white pb-6 leading-relaxed">
+                      From simple custom Copilots to security-trimmed
+                      andtightly governed AI projects, we build modern
+                      solutionsthat connect to your enterprise data,
+                      transforminformation, and surface it in your M365 apps.
+                    </p>
                   </div>
                 </div>
               </div>
-              <img class="screen" src="img/screen-siteprovisioning.png" />
             </div>
-          </div>
-          <div class="group-2">
-            <p class="designed-for-desktop">SharePoint -&nbsp;&nbsp;<br />Site provisioning web part</p>
-            <p class="p">
-              The ultimate solution for swift and efficient SharePoint site creation. Tailored for both individual users
-              and businesses, our app streamlines your SharePoint experience, enabling you to set up sites with
-              unprecedented ease and speed.
-            </p>
-            <div class="frame-13">
-              <div class="fa-bullseye"></div>
-              <div class="retina-ready">EASY-TO-USE INTERFACE</div>
-            </div>
-            <p class="startup-framework-wo">
-              Crafted for simplicity and efficiency, the web part offers an intuitive interface that makes site creation
-              a breeze, even for beginners.
-            </p>
-            <div class="frame-14">
-              <div class="fa-bullseye-2"></div>
-              <div class="responsive-layout">CUSTOMIZABLE TEMPLATES</div>
-            </div>
-            <p class="of-course-we-haven-t">
-              Choose from a wide range of customizable templates designed for various business needs and personal
-              preferences, ensuring your SharePoint site aligns perfectly with your vision.
-            </p>
-            <div class="frame-15"><div class="sign-up-6">Learn more</div></div>
-          </div>
-        </div>
-        <div class="frame-16">
-          <div class="text-wrapper-5">Last works</div>
-          <div class="frame-17"><div class="sign-up-7">Explore our Showcase</div></div>
-        </div>
-        <div class="frame-18">
-          <div class="frame-19">
-            <div class="startup-framework">Tiny Sharepoint URL Generator</div>
-            <p class="startup-is-a-powerfu">
-              Startup is a powerful tool for quick and convenient proto-typing of your projects. It will fit most
-              projects because it contains up-to-date and modern web elements.
-            </p>
-            <div class="frame-20"><div class="sign-up-8">Explore</div></div>
-          </div>
-          <div class="frame-21">
-            <div class="frame-22">
-              <p class="fast-UI-tool">SharePoint Permission Center web part</p>
-              <p class="all-frequently-used">
-                The web part makes it easier for site owners and users to answer the following questions: Who has access
-                to the site? What are the members of the default SharePoint groups? . . .
-              </p>
-              <div class="frame-23"><div class="sign-up-9">Explore</div></div>
-            </div>
-            <div class="frame-22">
-              <p class="fast-UI-tool">SharePoint Permission Center web part</p>
-              <p class="all-frequently-used">
-                The web part makes it easier for site owners and users to answer the following questions: Who has access
-                to the site? What are the members of the default SharePoint groups? . . .
-              </p>
-              <div class="frame-23"><div class="sign-up-9">Explore</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="overlap-6">
-          <div class="frame-24">
-            <div class="frame-25">
-              <div class="menu">
-                <div class="text-wrapper-6">About</div>
-                <div class="text-wrapper-7">Features</div>
-                <div class="text-wrapper-8">Templates</div>
-                <div class="text-wrapper-9">Integrations</div>
-                <div class="text-wrapper-10">Team</div>
-              </div>
-              <div class="menu-2">
-                <div class="text-wrapper-11">Resources</div>
-                <div class="text-wrapper-12">Ebooks</div>
-                <div class="text-wrapper-13">Infographics</div>
-                <div class="text-wrapper-14">Tools</div>
-                <div class="text-wrapper-15">Videos</div>
-                <div class="text-wrapper-16">Podcasts</div>
-              </div>
-            </div>
-            <div class="frame-26">
-              <div class="text-wrapper-17">Terms of Service</div>
-              <div class="text-wrapper-18">Privacy Policy</div>
-            </div>
-          </div>
-          <div class="frame-27"><div class="sign-up-10">Schedule Your Session</div></div>
-        </div>
-        <div class="group-3">
-          <div class="frame-28">
-            <p class="text-wrapper-2">Let us share our Work</p>
-            <p class="text-wrapper-19">
-              We have created a new product that will help designers, developers and companies create websites for their
-              startups quickly and easily.
-            </p>
-          </div>
-          <div class="section-wrapper">
-            <div class="section">
-              <div class="connect-with-dropbox-wrapper"><div class="connect-with-dropbox">Connect with US</div></div>
-              <p class="text-wrapper-19">
-                Generate leads and sales with our effective call-to-action blocks from buttons to testimonials to forms.
-              </p>
-              <div class="frame-29"><div class="sign-up-5">Get Started</div></div>
-            </div>
-          </div>
-          <div class="section-2">
-            <div class="connect-with-dropbox-wrapper"><div class="connect-with-dropbox">See our Code</div></div>
-            <p class="text-wrapper-19">
-              Generate leads and sales with our effective call-to-action blocks from buttons to testimonials to forms.
-            </p>
-            <div class="frame-29"><div class="sign-up-5">Get Started</div></div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </section>
+
+  <!-- End of Animation content -->
+
+  <!-- °°  Questions Teaser -->
+
+  <section id="services" class="intro py-20 pb-4 lg:pb-20">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap -mx-4 items-center mb-12 lg:mb-16">
+        <div class="w-full lg:w-1/2 px-12">
+          <h2 class="pretty mb-12 mt-2 lg:mb-4 text-4xl md:text-5xl font-heading leading-tight">
+            Experience Intelligent M365 Workflows with Whizzy and AI
+          </h2>
+
+          <p class="balance mb-16 lg:mb-0 text-lg text-gray-500 leading-loose">
+            Whizzy and AI in Microsoft 365 revolutionize work by
+            automatingtasks, offering personalized insights, and boosting
+            collaboration.This AI-driven method enhances productivity,
+            allowing users toconcentrate on creative and strategic endeavors.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/2 px-4">
+          <img class="w-full object-cover rounded-lg fade-in"
+            src="public/images/bg/photo-1601388152430-4ad0f14c0788.webp"
+            alt="Decorative image to visually complement the text" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° SCROLL LIST -->
+
+  <section class="site-margin question-section spacing-big">
+    <div class="questionelements">
+      <div class="questionbox">
+        <h3>AI Response Engine</h3>
+        <p>
+          We offer 2 solutions: 1&#41; The standard solution using Azure AI
+          Builder and Copilot Studio. The front end can be embedded in Teams,
+          on intranet pages as well as on SharePoint site pages. 2&#41; The
+          premium solution using our custom AI front end and the
+          <em>SharePoint AI web part</em>. This solution can connect to many
+          AI backends: Copilot, GPT models in Azure, and OpenAI ChatGPT. The
+          web part can be displayed on any SharePoint page as an overlay to
+          give you instant access from anywhere in SharePoint.
+        </p>
+      </div>
+
+      <div class="questionbox">
+        <h3>AI Data Mirroring</h3>
+        <p class="">
+          We have created an <em>AI based Page Creator</em> that uses a GPT
+          model to automatically create fact sheetsandlanding pages for
+          complex topics based on a set of customrequirements. We create a
+          custom data crawler thatlinks to yourdatabases, documents, intranet,
+          and SharePoint, enhancingsearchability through Microsoft search.Our
+          system updatesautomatically, generating a table of contents and
+          change log inMarkdown format for easyintegration with supporting
+          platforms.
+        </p>
+      </div>
+
+      <div class="questionbox">
+        <h3>SharePoint Migration Aid</h3>
+        <p>
+          Our team has migrated terrabytes of SharePoint sites in hundreds of
+          sites. We have customizable process with customizable tooling,
+          designed to deliver high quality results with predictable deadlines.
+          We can also build self-service migration solutions where site owners
+          can prepare their sites for migration and let the backend migrate
+          them overnight.
+        </p>
+      </div>
+
+      <div class="questionbox">
+        <h3>Teams/SharePoint Site Analysis</h3>
+        <p>
+          Our
+          <em>Site Scanner</em>
+          can give you detailed reports over the most used &#47; less used
+          teams and sites, types of stored documents, duplicate files and
+          content by year. Based on this data we can create weekly reports,
+          making it easy for you to monitor and manage the growth of your
+          Teams and SharePoint sites.
+        </p>
+      </div>
+
+      <div class="questionbox">
+        <h3>Security and Guest Access Check</h3>
+        <p>
+          Our
+          <em>Permission Scanner</em>
+          can give you all information about broken permission inheritance,
+          guest users, SharingLinks and who shared what with whom and when.
+          It's comparable to the ShareGate reports but with much more detail
+          and resolved M365 group memberships.
+        </p>
+      </div>
+
+      <div class="questionbox">
+        <h3>Cleanup & Archiving Plan</h3>
+        <p>
+          We can help you saving storage costs. Our
+          <em>Version Scanner</em>
+          gives you detailed insights about the amount of storage occupied by
+          file versions. We can identify unused sites and documents, and
+          reduce the amount of used storage by over 80% by archiving sites
+          in-place or to dedicated archives.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- °° Brand Logos -->
+
+
+
+  <section class="pt-32">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="logo-ani w-full md:w-1/2 lg:w-1/4 p-4">
+          <div class="py-4">
+            <img class="max-size h-8 mx-auto" src="public/images/svg/vattenfall-logo2.svg" alt="Vattenfall Logo" />
+          </div>
+        </div>
+        <div class="logo-ani w-full md:w-1/2 lg:w-1/4 p-4">
+          <div class="py-4">
+            <img class="max-size h-8 mx-auto" src="public/images/svg/deutsche-post-dhl.svg" alt="Deutsche Post Logo" />
+          </div>
+        </div>
+        <div class="logo-ani w-full md:w-1/2 lg:w-1/4 p-4">
+          <div class="py-4">
+            <img class="max-size h-8 mx-auto" src="public/images/svg/gasag-logo.svg" alt="Gasag Logo" />
+          </div>
+        </div>
+        <div class="logo-ani w-full md:w-1/2 lg:w-1/4 p-4">
+          <div class="py-4">
+            <img class="max-size h-8 px-3 mx-auto" src="public/images/svg/deutsche-telekom-logo.svg"
+              alt="Telekom Logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- °° Wep Part Provisioning Center -->
+
+
+
+  <section class="pt-32 lg:pt-32 pb-0 md:pb-16">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap items-center -mx-4">
+        <div class="w-full lg:w-1/2 px-4 mb-12 md:mb-0">
+          <div id="solutions" class="lg:w-11/12">
+            <h2 class="lg:w-11/12 mt-2 px-8 lg:px-0 text-4xl lg:text-5xl font-heading leading-snug mb-10">
+              <p class="sub-head">Web part</p>
+              SharePoint Web Part Provisioning
+              Center
+            </h2>
+            <p class="balance px-8 lg:px-0 mb-6 text-lg text-gray-500 leading-loose pb-6 lg:pb-0">
+              Simplify ECM site management and provisioning. Easily request new setups, view sites, and customize
+              settings. Includes
+              backend support for tasks like ownership transfer and storage extension, with detailed logging. Access
+              resources and
+              technical documentation for support and reference.
+            </p>
+
+            <ul class="space-y-5 px-8 lg:px-0 mb-8 lg:w-11/12">
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Effortlessly request new site provisioning through our user-friendly interface
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Seamlessly navigate ECM sites with our intuitive, sortable, and filterable table
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Customize data viewing with convenient filter buttons for quick access
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Smoothly tailor your setup with adjustable columns, URLs, and options
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Track every lifecycle action with detailed Sharepoint list logging
+                </p>
+              </li>
+            </ul>
+
+
+            <!--  <button class="lg:w-11/12 lg:px-0 pt-3 lg:pb-4 px-6 w-full flex flex-wrap">
+              <a class="pulse-blue w-full py-3 text-white text-sm font-bold leading-loose rounded transition bg-blue-500"
+                href="#" aria-label="Click to learn more">
+                Learn more
+              </a>
+            </button> -->
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 px-4">
+
+          <img class="trigger group-01 py-8 lg:pt-10 w-full object-cover rounded-lg fade-in mt-12 lg:mt-0"
+            data-type="image" data-src="public/images/big/webpart-example-big.webp"
+            src="public/images/small/webpart-example-small.webp" alt="Weppart Screenshot"
+            aria-label="Click to enlarge the image" />
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° 3 Pics -->
+
+  <section class="">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap -mx-4">
+        <div class="fade-in-01 w-full md:w-1/3 p-4">
+          <img class="trigger group-01 w-full object-cover rounded-lg pic-border bg-shadow cine-hd" data-type="image"
+            data-src="public/images/big/weppart-screenshot-01-big.webp"
+            src="public/images/small/weppart-screenshot-01-small.webp" alt="App Screenshot" />
+        </div>
+        <div class="fade-in-02 w-full md:w-1/3 p-4">
+          <img class="trigger group-01 w-full object-cover rounded-lg pic-border bg-shadow cine-hd" data-type="image"
+            data-src="public/images/big/weppart-screenshot-02-big.webp"
+            src="public/images/small/weppart-screenshot-02-small.webp" alt="App Screenshot" />
+        </div>
+        <div class="fade-in-03 w-full md:w-1/3 p-4 mb-8">
+          <img class="trigger group-01 w-full object-cover rounded-lg pic-border pic bg-shadow cine-hd"
+            data-type="image" data-src="public/images/big/weppart-screenshot-03-big.webp"
+            src="public/images/small/weppart-screenshot-03-small.webp" alt="App Screenshot" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- °° Powerapp -->
+
+
+  <section class="pt-32 lg:pt-40 pb-0 md:pb-16">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap items-center -mx-4">
+        <div class="w-full lg:w-1/2 px-4 order-1 lg:order-0">
+          <img class="trigger group-02 fade-in w-full object-cover rounded-lg pic-border pic-padding bg-shadow cine-hd"
+            data-type="image" data-src="public/images/svg/powerapp-01.svg"
+            src="public/images/small/powerapp-01-small.webp" alt="Power App Screenshot" />
+        </div>
+        <div class="w-full lg:w-1/2 px-4 lg:order-1 mb-12 lg:mb-0">
+          <div class="lg:w-11/12 lg:ml-auto">
+
+            <h2 class="balance mt-2 px-8 lg:px-0 text-4xl lg:text-5xl font-heading leading-snug mb-10">
+              <p class="sub-head">Power App</p>
+              Operations report Power App
+            </h2>
+            <p class="balance px-8 lg:px-0 mb-6 text-lg text-gray-500 leading-loose pb-6 lg:pb-0">
+              With this tool, you will get much better results at work and
+              develop new skills. Will you take the risk of trying the latest
+              version of our application?
+            </p>
+            <ul class="space-y-5 px-8 lg:px-0 mb-8 lg:w-11/12">
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Generate a unique Id to shorten any URL entered by the user
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Allow users to create personalized URLs with custom Ids
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Enable retrieval of previously shortened URLs via their Ids
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Automatically redirect from a shortened URL to the original
+                  URL
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Switch between shortening and redirecting based on URL
+                  structure
+                </p>
+              </li>
+            </ul>
+
+            <!-- <button class="lg:w-11/12 lg:px-0 pt-3 lg:pb-4 px-6 w-full flex flex-wrap">
+              <a class="pulse-blue w-full py-3 text-white text-sm font-bold leading-loose rounded transition bg-blue-500"
+                href="#" aria-label="Click to learn more">
+                Learn more
+              </a>
+            </button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° 3 Pics -->
+
+  <section class="">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap -mx-4">
+        <div class="fade-in-01 w-full md:w-1/3 p-4">
+          <img class="trigger group-02 w-full object-cover rounded-lg pic-border bg-shadow cine-hd" data-type="image"
+            data-src="public/images/svg/powerapp-04.svg" src="public/images/small/powerapp-04-small.webp"
+            alt="App Screenshot" />
+        </div>
+        <div class="fade-in-02 w-full md:w-1/3 p-4">
+          <img class="trigger group-02 w-full object-cover rounded-lg pic-border bg-shadow cine-hd" data-type="image"
+            data-src="public/images/svg/powerapp-03.svg" src="public/images/small/powerapp-03-small.webp"
+            alt="App Screenshot" />
+        </div>
+        <div class="fade-in-03 w-full md:w-1/3 p-4 mb-8">
+          <img class="trigger group-02 w-full object-cover rounded-lg pic-border pic bg-shadow cine-hd"
+            data-type="image" data-src="public/images/svg/powerapp-02.svg"
+            src="public/images/small/powerapp-02-small.webp" alt="App Screenshot" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- °° Wep Part Permission Center -->
+
+
+
+  <section class="pt-32 lg:pt-40 pb-0 md:pb-16">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap items-center -mx-4">
+        <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+          <div class="lg:w-11/12">
+
+            <h2 class="balance mt-2 px-8 lg:px-0 text-4xl lg:text-5xl font-heading leading-snug mb-10">
+              <p class="sub-head">Web part</p>
+              SharePoint Permission Center
+            </h2>
+            <p class="px-8 pretty lg:px-0 mb-6 text-lg text-gray-500 leading-loose pb-6 lg:pb-0">
+              offers the following features for managing user permissions on
+              SharePointOnline sites:
+            </p>
+
+            <ul class="space-y-5 px-8 lg:px-0 mb-8 lg:w-11/12">
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Reveal hidden groups linked to shared docs and unassigned
+                  groups
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Identify users with site access, including their group
+                  memberships
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Display all users across SharePoint, M365, Azure in a
+                  unified view
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Manage user group memberships, permissions on classic
+                  SharePoint pages
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Detail group nesting hierarchies, visualize custom group
+                  compositions
+                </p>
+              </li>
+            </ul>
+
+            <button class="lg:w-10/12 lg:px-0 pt-3 lg:pb-4 px-6 w-full flex flex-wrap">
+              <a class="pulse-blue w-full py-3 text-white text-sm font-bold leading-loose rounded transition bg-blue-500"
+                href="https://www.sharepoint-permission-center.com/" target="_blank"
+                aria-label="Move to sharepoint-permission-center.com">
+                Visit the documentation site
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 px-4">
+
+          <img class="trigger w-full object-cover rounded-lg fade-in mt-12 lg:mt-0" data-type="image"
+            data-src="public/images/svg/permission.svg" src="public/images/small/permission-small.webp"
+            alt="Weppart App Screenshot" aria-label="Click to enlarge the image" />
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° Url Shortener -->
+
+  <section class="pt-32 lg:pt-20 pb-32 lg:pb-16">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap items-center -mx-4">
+        <div class="w-full lg:w-1/2 px-4 order-1 lg:order-0 flex justify-center">
+          <img class="trigger fade-in w-80 object-cover rounded-lg mobile-mt-2" data-type="image"
+            data-src="public/images/svg/urlshortener.svg" src="public/images/small/UrlShortener-small.webp"
+            alt="Url Shortener Screenshot" />
+        </div>
+        <div class="w-full lg:w-1/2 px-4 lg:order-1 mb-12 lg:mb-0">
+          <div class="lg:w-11/12 lg:ml-auto">
+
+            <h2 class="balance mt-2 px-8 lg:px-0 text-4xl lg:text-5xl font-heading leading-snug mb-10">
+              <p class="sub-head">Web part</p>
+              SharePoint URL Shortener and Redirector
+            </h2>
+            <p class="pretty px-8 lg:px-0 mb-6 text-lg text-gray-500 leading-loose pb-6 lg:pb-0">
+              offers the following features for managing and utilizing URL
+              shortening and redirection on SharePoint sites:
+            </p>
+
+            <ul class="space-y-5 px-8 lg:px-0 mb-8 lg:w-11/12">
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Generate a unique Id to shorten any URL entered by the user
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Allow users to create personalized URLs with custom Ids
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Enable retrieval of previously shortened URLs via their Ids
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Automatically redirect from a shortened URL to the original
+                  URL
+                </p>
+              </li>
+
+              <li class="flex items-center">
+                <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="11" />
+                  <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                </svg>
+                <p class="ml-4">
+                  Switch between shortening and redirecting based on URL
+                  structure
+                </p>
+              </li>
+            </ul>
+
+            <button class="lg:w-11/12 lg:px-0 pt-3 lg:pb-4 px-6 w-full flex flex-wrap">
+              <a class="pulse-blue w-full py-3 text-white text-sm font-bold leading-loose rounded transition bg-blue-500"
+                href="https://sharepoint-url-shortener.com/" target="_blank"
+                aria-label="Move to sharepoint-url-shortener.com">
+                Visit the documentation site
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° Philosophy -->
+
+  <!-- °° Statement -->
+
+  <section id="philosophy" class="site-margin py-32 bg-blue-500 mt-12 mb-8 gradient-01">
+    <div class="container px-4 mx-auto">
+      <div class="justify-content flex flex-wrap">
+        <div class="mx-auto text-center max-w-5xl">
+          <h2 class="balance mb-6 text-4xl lg:text-5xl font-bold text-white leading-tight">
+            Working methods and design philosophy
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° 1-6 Working Boxes -->
+
+  <section class="dev-pro-section py-20">
+    <div class="container px-4 mx-auto">
+      <h3 class="balance mx-4 lg:mx-0 mb-16 text-4xl lg:text-5xl leading-tight">
+        Working methods
+      </h3>
+
+      <div class="flex flex-wrap -mx-4 -mb-16">
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 1 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Know the problem</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Begin with the design when you fully understand what problem
+                is to be solved. Break tasks down until they become sharp and
+                clear. Write a mission statement.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 2 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Design it 100%</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Changes can become costly afterwards. Deliver a consistent and
+                detailed design & functional specification to key users and
+                developers and discuss alternatives early.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 3 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Functional prototype</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Focus on functionality and operational stability. Users will
+                forgive an imperfect UI but not crashes and failures. Make it
+                reliable even at the cost of skipping features.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 4 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Test while you code</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                There is no “We’ll fix it afterwards.” Develop new features
+                only if you finished all tests and fixed all known critical
+                bugs. Establish a One-Click-Release process early.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 5 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">
+                Document user feedback
+              </h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Go to key users and observe how they use your product without
+                training. Write down questions, problems, feature ideas &
+                changes. Create a usability report and a final product
+                specification.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 6 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Finalize the product</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Finalize features and documentation. Create a site for
+                documentation, help and user feedback. Update the backlog for
+                further releases. Build attention before the final release.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° 1-9 Philosophy Boxes -->
+
+  <section class="dev-pro-section py-20">
+    <div class="container px-4 mx-auto">
+      <h3 class="balance mx-4 lg:mx-0 mb-16 text-4xl lg:text-5xl leading-tight">
+        Design philosophy
+      </h3>
+
+      <div class="flex flex-wrap -mx-4 -mb-16">
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 1 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Minimalistic</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Users expect simple solutions for complex problems. Design for
+                unexperienced users first. Offer simple and safe actions while
+                letting them explore features in detail as they use the app.
+                Instead of oversimplifying the problem, try to simplify the
+                solution.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 2 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Self-explanatory</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Users usually don't read manuals. Provide tool-tips with
+                keyboard shortcuts and context-related help. Include previews
+                and walkthroughs. Also make it easy to disable all proactive
+                help. Provide a full and versioned documentation on- and
+                offline.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 3 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Explorative</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Use different screens for beginners and experienced users and
+                allow for easy switching between these views. Actions and
+                customizations should be reversible using known concepts like
+                undo, back, factory reset, and command lists.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 4 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Innovative</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Our main goal is to enable people to work as fast as they
+                think. Innovative solutions do more with less. Make deep
+                domain specific knowledge, years of experience and complex
+                mental models accessible to the unexperienced user as simple
+                executable actions and predefined tasks & configurations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 5 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Do the impossible</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Impress users by simplifying their most complex and
+                time-consuming tasks. Measure your solutions value by the
+                amount of complexity it reduces, the errors it eliminates and
+                the time it saves the user.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 6 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Always just works</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Reliability is the result of a carefully designed architecture
+                that expects the unexpected. Weird usage patterns or inputs
+                should never break your app. Focus on data consistence and
+                safe transactions. Help your users understand your apps inner
+                workings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 7 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Empowering</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Let interested users gain additional knowledge about the
+                problems context and alternative solutions. Link to resources
+                that add value: cheat-sheets, tutorials, articles. Help the
+                user become an educated professional by explaining terms,
+                definitions, concepts and best practices.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 8 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Personal</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Offer saving and loading of configurations wherever possible.
+                Allow users to edit, export and import configuration files.
+                Always use encryption for personal data. Remember last used
+                context information: directories, filenames, options, user
+                input and selections.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-16">
+          <div class="flex">
+            <span class="mr-6"><b> 9 </b></span>
+            <div>
+              <h3 class="mb-2 text-2xl font-heading">Affordable</h3>
+              <p class="text-lg leading-loose text-gray-500">
+                Provide free demos, documentation and tutorials. Make sure
+                customers can try before buy. Use multi-tier pricing models to
+                allow users to up- and downgrade as their needs change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° Trainee Programm -->
+
+  <section class="trainee-section py-20">
+    <div class="container px-4 mx-auto">
+      <div class="mx-auto">
+        <h2 id="trainee" class="mb-12 text-5xl font-heading">
+          Welcome to Whizzy's Trainee Program
+        </h2>
+
+        <svg class="object fade-in animated" id="freepik_stories-learning" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 500" version="1.1"
+          xmlns:svgjs="http://svgjs.com/svgjs">
+          <style>
+            .object {
+              margin-top: -60px !important;
+            }
+
+            svg#freepik_stories-learning:not(.animated) .animable {
+              opacity: 0;
+            }
+
+            svg#freepik_stories-learning.animated #freepik--background-simple--inject-4 {
+              animation: 3s Infinite ease-in-out floating;
+              animation-delay: 0s;
+            }
+
+            svg#freepik_stories-learning.animated #freepik--Character--inject-4 {
+              animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown;
+              animation-delay: 0s;
+            }
+
+            @keyframes floating {
+              0% {
+                opacity: 1;
+                transform: translateY(0px);
+                transform: translateY(0px);
+              }
+
+              50% {
+                transform: translateY(-10px);
+              }
+
+              100% {
+                opacity: 1;
+                transform: translateY(0px);
+              }
+            }
+
+            @keyframes slideDown {
+              0% {
+                opacity: 0;
+                transform: translateY(-30px);
+              }
+
+              100% {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+
+            .animator-hidden {
+              display: none;
+            }
+
+            .cls-1 {
+              opacity: 0.7;
+            }
+
+            .cls-1,
+            .cls-2,
+            .cls-3,
+            .cls-4,
+            .cls-5,
+            .cls-6,
+            .cls-7,
+            .cls-8 {
+              stroke-width: 0px;
+            }
+
+            .cls-1,
+            .cls-2,
+            .cls-4,
+            .cls-6 {
+              isolation: isolate;
+            }
+
+            .cls-1,
+            .cls-6,
+            .cls-8,
+            .cls-9 {
+              fill: #fff;
+            }
+
+            .cls-2,
+            .cls-11,
+            .cls-7 {
+              fill: #407bff;
+            }
+          </style>
+          <g id="freepik--background-simple--inject-4" class="hover animable"
+            style="transform-origin: 255.124px 250.609px">
+            <g id="els4mxazlf12">
+              <path class="cls-1"
+                d="M503,199.3s-34.4-58.8-121.6-78.4c-87.2-19.6-180,5.3-256,24.1-76,18.7-115.9,67.6-98.9,117.9,17,50.3,81,47.1,140.7,92.1,59.7,45,66.6,63.7,149.4,77.3,82.8,13.6,173.3-37.7,195.8-111.2,22.6-73.4-9.4-121.8-9.4-121.8Z" />
+            </g>
+            <path id="el8qha866h9aw" class="cls-7"
+              d="M528.1,213.2c19.6,46.2,11.5,98.5-32.4,138.1-30.3,27.2-72.9,44.9-119.5,49.7-23.3,2.3-47.9,1.3-70.4-3.9-25.9-6-48-18.8-74-24.6-32.4-7.2-62.4,2.4-94.9-.4-26.8-2.3-50.8-14.3-68.5-29.7-32.2-28-44.8-68.2-32.7-104.1,10.2-30.4,36.6-56.5,67.3-77.6,47.4-32.5,107.4-55.3,171-61.1,63.6-5.8,130.6,6.1,181.6,35.3,34.6,19.9,59.6,47.8,72.5,78.2Z" />
+            <g id="eluz7cyiy1i5a">
+              <path class="cls-1"
+                d="M528.1,213.2c19.6,46.2,11.5,98.5-32.4,138.1-30.3,27.2-72.9,44.9-119.5,49.7-23.3,2.3-47.9,1.3-70.4-3.9-25.9-6-48-18.8-74-24.6-32.4-7.2-62.4,2.4-94.9-.4-26.8-2.3-50.8-14.3-68.5-29.7-32.2-28-44.8-68.2-32.7-104.1,10.2-30.4,36.6-56.5,67.3-77.6,47.4-32.5,107.4-55.3,171-61.1,63.6-5.8,130.6,6.1,181.6,35.3,34.6,19.9,59.6,47.8,72.5,78.2Z" />
+            </g>
+          </g>
+
+          <g id="freepik--Character--inject-4" class="animable animator-active"
+            style="transform-origin: 270.845px 340.131px">
+            <path
+              d="M417.33,428.05c-5.36,4.46-46.65,32.8-105.57,28.23-3.17-26.82-15.26-137-1.51-154.28,0,0,33.36-15.91,64.09-9.23s42.69,13.08,44.88,18.62C420.88,315.58,418.51,393.6,417.33,428.05Z"
+              style="
+                  fill: rgb(38, 50, 56);
+                  transform-origin: 361.805px 373.954px;
+                " id="el1x0hg7l5k31" class="animable"></path>
+            <path
+              d="M373.32,304.54c-17.7,15.33-40.5,12.09-40,.32.08-1.84,2.05-4.12,2.05-4.12l-.69-1.06-3-4.53c-2.19-3.39-4.93-7.65-6.84-10.75-1.6-2.64,38.29-27.18,38.29-13.07,0,19.88,9.76,23.62,9.76,23.62C376.57,296.43,380,298.77,373.32,304.54Z"
+              style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 350.955px 290.938px;
+                " id="el4azbb9vyrol" class="animable"></path>
+            <path d="M384.51,334.9s-3.57,12.24-1.88,15.75" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 383.343px 342.775px;
+                " id="ellv0wq1tuw8" class="animable"></path>
+            <path d="M380.34,299.36c0,11.81-35.23,23.38-45.55,11.53" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 357.565px 307.609px;
+                " id="elwanwrvogqr" class="animable"></path>
+            <path
+              d="M351.36,285.73S349,294.63,338,301.58a4.12,4.12,0,0,0-2.37-1.87,3.11,3.11,0,0,0-1,0l-3-4.53C337.32,291.08,351.36,285.73,351.36,285.73Z"
+              style="
+                  fill: rgb(38, 50, 56);
+                  transform-origin: 341.495px 293.655px;
+                " id="el7ujc8zpcwhm" class="animable"></path>
+            <path
+              d="M356.3,274.79s-.12,8.78-2,10.57c-13.95,13.38-27.59,14.44-29.84,10.91-15.15-23.76-11.57-30-13.11-34.07-2.73-7.14-6.08-18.8-4.6-25.86,3.3-15.77,33-28,48.64-12.14,7.5,7.59,9.87,24.06,8.29,37.78"
+              style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 335.266px 257.397px;
+                " id="elpj04tc9nsd" class="animable"></path>
+            <path d="M313.26,254.86s-4.17-1.87-5.07.36" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 310.725px 254.673px;
+                " id="elzw1q4d2i8p" class="animable"></path>
+            <path d="M323.37,255s8.67-3.63,12.57.78" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 329.655px 254.688px;
+                " id="elu0v8nqq88e" class="animable"></path>
+            <path
+              d="M333,261.15c.14,1.3-.49,2.43-1.42,2.54s-1.79-.88-1.93-2.18.49-2.44,1.42-2.54S332.82,259.85,333,261.15Z"
+              style="
+                  fill: rgb(38, 50, 56);
+                  transform-origin: 331.325px 261.331px;
+                " id="el9cz1n81m48" class="animable"></path>
+            <path
+              d="M316,261.54c.15,1.3-.49,2.44-1.42,2.54s-1.79-.87-1.93-2.17.49-2.44,1.42-2.54S315.84,260.24,316,261.54Z"
+              style="
+                  fill: rgb(38, 50, 56);
+                  transform-origin: 314.326px 261.725px;
+                " id="elspxjzyvfdh8" class="animable"></path>
+            <path d="M316.42,258.12c1.21,1.95.55,5.28-1.05,9.85s-.19,6.22,5.95,6.68" style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 318.041px 266.385px;
+                " id="el4up9i1cwwx6" class="animable"></path>
+            <path d="M321.32,282.56s8-.73,11.66-2.74" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 327.15px 281.19px;
+                " id="eldp362mtd5r5" class="animable"></path>
+            <path
+              d="M372,237.22c0-5.94-5.86-18.13-16.14-19.5h0c-5.91-6.18-14.33-8.45-24.55-6.1-23.62,5.42-30.81,28.74-31.84,32.6-.1.36-.15.56-.15.56l6.32-1.6-2.72,5.31,3.31,2.19-.76.84,3.84,3.7-1.2-6.76c.74-4.36,5.76-10.46,5.76-10.46a16.31,16.31,0,0,0-3.3,8.19c2-5.19,14-10,14-10-3.89,3.16-6,9.34-6,9.34,3.7-4.56,12.37-7.51,17.92-9.08,1.87,4.51,4.84,9.22,9.08,11.83,4,2.46,3.86,7.54,3.86,7.54a23.32,23.32,0,0,1,9,12.36l4.84,6.62S372,264.09,372,237.22Z"
+              style="
+                  fill: rgb(38, 50, 56);
+                  transform-origin: 335.66px 242.756px;
+                " id="el1sndrfcgd7z" class="animable"></path>
+            <path
+              d="M351.63,257.52c-1.62-3.47,4.26-12.87,8.43-11.71,2.34.66,5.4,4.93,6,9.41s-2.57,13-5.95,14.85c-2.15,1.2-3.92-2.07-3.92-2.07"
+              style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 358.744px 258.023px;
+                " id="elwvi99p70z2" class="animable"></path>
+            <polygon points="96.51 427.25 209.5 400.83 445.18 428.05 384.5 469.55 96.51 427.25" style="
+                  fill: rgb(255, 255, 255);
+                  transform-origin: 270.845px 435.19px;
+                " id="elx4uaf6ap4" class="animable"></polygon>
+            <polyline points="96.51 427.25 209.5 400.83 445.18 428.05" style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 270.845px 414.44px;
+                " id="el3022kh35l3y" class="animable"></polyline>
+            <polygon points="194.29 432.55 240.03 412.33 297.86 415.32 272.14 437.31 194.29 432.55" style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 246.075px 424.82px;
+                " id="eliwlac0soei" class="animable"></polygon>
+            <path
+              d="M312.48,301c-14.67,6-17.83,19.49-42.76,72.8,0,0-11.07,2.27-17,15.72s4,24.07,15.43,23.71c0,0,4.59,4,14,3.59s51-64.05,51-64.05Z"
+              style="
+                  fill: rgb(38, 50, 56);
+                  transform-origin: 292.049px 358.925px;
+                " id="ell106jh2iujf" class="animable"></path>
+            <path d="M274.09,376.93c6.56,5.84,10.33,14.41,8.33,23.91" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 278.523px 388.885px;
+                " id="elshumhgemxro" class="animable"></path>
+            <path d="M280.42,379.74s8.06,1.76,9.31,12.08" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 285.075px 385.78px;
+                " id="elexrowwjyc0r" class="animable"></path>
+            <path d="M304,349.54a58.84,58.84,0,0,1-3.82-29.67" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 301.846px 334.705px;
+                " id="el844uc9xmy6k" class="animable"></path>
+            <path d="M302.86,335.94c-.61,4.2,3.73,26.56,3.7,50.07" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 304.681px 360.975px;
+                " id="ely4q08uem75s" class="animable"></path>
+            <path
+              d="M412.52,305.42c18.35,9.22,20.53,37.59,3.22,71.51-12.23,23.94-29.11,59.29-39.79,61.66s-21.1-4.28-21.1-4.28-9-.42-11.72-6.82C335.69,410,354.6,387.9,362,393.19c0,0,23.76-51.67,28.09-54.93"
+              style="
+                  fill: rgb(38, 50, 56);
+                  transform-origin: 384.503px 372.26px;
+                " id="el2dxl6ru6ctu" class="animable"></path>
+            <path d="M341.43,416.86C339,404.79,358,390.55,362,393.19c0,0,14.11.79,16.22,10.55" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 359.718px 404.865px;
+                " id="elm0t8dhwpmbm" class="animable"></path>
+            <path d="M393.12,419.43c8.26-14.57,22.62-42.5,22.62-42.5" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 404.43px 398.18px;
+                " id="elz82yvu8i56o" class="animable"></path>
+            <path d="M362,393.19s9.89-5.92,17.28-.32" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 370.64px 391.826px;
+                " id="el20xgonj75f6" class="animable"></path>
+            <path d="M365.38,386s5.46-12,11-23,18.22-27.29,23.49-28.08" style="
+                  fill: none;
+                  stroke: rgb(255, 255, 255);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 382.625px 360.46px;
+                " id="elxp2m059u2u" class="animable"></path>
+            <path
+              d="M261.16,407.57a8.14,8.14,0,0,1-3.4-.93c-17-8.87-30.22-23.53-38.18-34.05A125.73,125.73,0,0,1,211.05,360l4.08-17.48s3.84,10,19.27,19.83,33.76,13.07,39.69,23C279.34,394,270.09,408,261.16,407.57Z"
+              style="
+                  fill: rgb(255, 255, 255);
+                  transform-origin: 243.334px 375.05px;
+                " id="ellq8iwwuv5ps" class="animable"></path>
+            <g style="
+                  clip-path: url('#freepik--clip-path-2--inject-4');
+                  transform-origin: 243.334px 375.05px;
+                " id="el9xpqit2efsn" class="animable">
+              <g id="elg6afhi7lyd">
+                <path
+                  d="M261.16,407.57a16.55,16.55,0,0,0-1-3.69c-3.57-8.94-25.17-26.71-25.17-26.71-5.14-.16-10.79-2.3-15.39-4.58A125.73,125.73,0,0,1,211.05,360l4.08-17.48s3.84,10,19.27,19.83,33.76,13.07,39.69,23C279.34,394,270.09,408,261.16,407.57Z"
+                  style="
+                      fill: rgb(64, 123, 255);
+                      opacity: 0.4;
+                      transform-origin: 243.334px 375.05px;
+                    " class="animable"></path>
+              </g>
+            </g>
+            <path
+              d="M261.16,407.57a8.14,8.14,0,0,1-3.4-.93c-17-8.87-30.22-23.53-38.18-34.05A125.73,125.73,0,0,1,211.05,360l4.08-17.48s3.84,10,19.27,19.83,33.76,13.07,39.69,23C279.34,394,270.09,408,261.16,407.57Z"
+              style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 243.334px 375.05px;
+                " id="elz04r4pzsl8" class="animable"></path>
+            <path d="M222.66,358.94s-2.11,9.32-7.67,7.23c-3-1.13-8.78-10.09-9.87-14.61Z" style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 213.89px 359.018px;
+                " id="elsx7dm3ehkj8" class="animable"></path>
+            <path
+              d="M198.15,301.55l4.54-2.34s12.83.11,20.79,6.58c7.23,5.88,10.9,15.09,10.9,15.09s28.09-15.51,56.78-6.61l11.7,65.21L249.07,383,215.5,351.11Z"
+              style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 250.505px 341.105px;
+                " id="elhgttu0u58nw" class="animable"></path>
+            <path
+              d="M306.56,382.09s-6.31-.19-14.75.09c-12.76.4-30.39,1.84-38.45,6.53l-.38-.13L245.6,386l-.15-.22c-1.36-2-12.33-17.75-28-24.16l-22.16-61.92s23,1,35.57,21.78l6.31,2.28s37.55-11.12,58.57-7.12Z"
+              style="
+                  fill: rgb(64, 123, 255);
+                  transform-origin: 250.925px 344.205px;
+                " id="elssimlrqv8h" class="animable"></path>
+            <g style="
+                  clip-path: url('#freepik--clip-path-3--inject-4');
+                  transform-origin: 243.55px 344.21px;
+                " id="elyd24p4zwhq" class="animable">
+              <g id="el8xfeuh4gjfu">
+                <path d="M245.45,385.79c-1.36-2-12.33-17.75-28-24.16l-22.16-61.92s23,1,35.57,21.78Z" style="
+                      fill-opacity: 0.7;
+                      opacity: 0.3;
+                      transform-origin: 220.37px 342.75px;
+                    " class="animable"></path>
+              </g>
+              <g id="elga3hgil2ueh">
+                <path
+                  d="M291.81,382.18c-12.76.4-30.39,1.84-38.45,6.53l-.38-.13L238.24,326s12.06-2.71,15.77-1.34C254,324.68,278.52,342.77,291.81,382.18Z"
+                  style="
+                      fill-opacity: 0.7;
+                      opacity: 0.3;
+                      transform-origin: 265.025px 356.492px;
+                    " class="animable"></path>
+              </g>
+            </g>
+            <path
+              d="M306.56,382.09s-6.31-.19-14.75.09c-12.76.4-30.39,1.84-38.45,6.53l-.38-.13L245.6,386l-.15-.22c-1.36-2-12.33-17.75-28-24.16l-22.16-61.92s23,1,35.57,21.78l6.31,2.28s37.55-11.12,58.57-7.12Z"
+              style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 250.925px 344.205px;
+                " id="elt6vizwo8fw" class="animable"></path>
+            <line x1="237.19" y1="323.77" x2="251.66" y2="383.8" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 244.425px 353.785px;
+                " id="elezkf2gq6cp" class="animable"></line>
+            <line x1="245.6" y1="386.01" x2="231.54" y2="326.02" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 238.57px 356.015px;
+                " id="el2yf23beurkr" class="animable"></line>
+            <path
+              d="M209.88,360.05c-3.21-.89-9.68-20.18-6.72-28.49,0,0,3.52-6.11,5-6.53,2.24-.65,11.28-.46,10.84,1.06-1,3.52-7.94,3.46-7.94,3.46l-2.25,4.12.09,2.27s3.27-2.38,4.47-2.31c.62,0,3.82,1.6,6.36,2.94,2.17,1.15,3.5,1.78,3,2.82-1.61,3.46-8.46,1-8.46,1l-2.58,3.89s2.49.43,3.58.55,10.14,6.15,9.87,6.9c-1.07,2.94-9.65-.24-9.65-.24l-1.52,1.27s6.32,1.63,7,1.87c1,.37,4.85,3.33,4.79,3.67-.46,2.6-5.77.69-5.77.69l-4.65-.19a5.72,5.72,0,0,1-2.48,1.28"
+              style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 214.082px 342.379px;
+                " id="el4zrm1j1qus" class="animable"></path>
+            <path d="M208.86,335.94s-3,2.52-3.77,3.25-.58,3.05-.58,3.05" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 206.675px 339.09px;
+                " id="elezj0prpdtm" class="animable"></path>
+            <path d="M206.69,347.36c0,2.54,1.7,4.08,2.48,4.9s-1.25,3.05,1,4.65" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 208.43px 352.135px;
+                " id="elmd9cfrnq9ta" class="animable"></path>
+            <path
+              d="M354.81,427.87c-6.35,1.73-13.25-9.43-21.67-21.61h0c-5.56-8-11.78-16.53-18.93-22-.57-.43-1.15-.85-1.73-1.25l4.18-21c8.68,4.55,14.06,11.84,23.07,19.33,14.5,12.07,27.35,19.48,30.91,24.82S365.69,424.9,354.81,427.87Z"
+              style="
+                  fill: rgb(255, 255, 255);
+                  transform-origin: 341.971px 395.029px;
+                " id="elb4x5dsmwvhe" class="animable"></path>
+            <g style="
+                  clip-path: url('#freepik--clip-path-4--inject-4');
+                  transform-origin: 323.675px 395.04px;
+                " id="elq6fjv1q8gxn" class="animable">
+              <g id="elp27wge9mibo">
+                <path d="M333.14,406.25c-5.56-8-11.78-16.53-18.93-22a7,7,0,0,0,2.77-.42S328.28,393,333.14,406.25Z"
+                  style="
+                      fill: rgb(64, 123, 255);
+                      opacity: 0.4;
+                      transform-origin: 323.675px 395.04px;
+                    " class="animable"></path>
+              </g>
+            </g>
+            <path
+              d="M354.81,427.87c-6.35,1.73-13.25-9.43-21.67-21.61h0c-5.56-8-11.78-16.53-18.93-22-.57-.43-1.15-.85-1.73-1.25l4.18-21c8.68,4.55,14.06,11.84,23.07,19.33,14.5,12.07,27.35,19.48,30.91,24.82S365.69,424.9,354.81,427.87Z"
+              style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 341.971px 395.029px;
+                " id="eld0hiv6zy7a" class="animable"></path>
+            <path
+              d="M319,382.18a3.47,3.47,0,0,1-2,1.62,7,7,0,0,1-.69.23l-.19,0c-6.71,1.75-21.81-1.89-21.81-1.89s-9.89-4.7-10.49-5.81a27.22,27.22,0,0,1-1.11-2.7l-.27-.79s-3.56-2-4-3.56-1.19-2,1-2.28,14,0,14,0l-12.85-5.24s-8.51-4.29-9.3-5.8-1.78-2.51,2.57-1.91,13.85,3.36,13.85,3.36L295.2,359l-7.44-3.17s-14.64-1.77-11.87-6.32h8.31a85.79,85.79,0,0,1,14,1.78c2.42.74,18.42,10.68,18.42,10.68"
+              style="
+                  fill: rgb(255, 255, 255);
+                  transform-origin: 294.8px 367.008px;
+                " id="ele1gvkgv2g3u" class="animable"></path>
+            <g style="
+                  clip-path: url('#freepik--clip-path-5--inject-4');
+                  transform-origin: 299.395px 379.108px;
+                " id="elveetbva383" class="animable">
+              <g id="el5cp6lf8kd8e">
+                <path
+                  d="M316.1,384.07c-6.71,1.75-21.81-1.89-21.81-1.89s-9.89-4.7-10.49-5.81a27.22,27.22,0,0,1-1.11-2.7L294.83,375a5.15,5.15,0,0,0,0,5C296.18,382.43,311.56,384.89,316.1,384.07Z"
+                  style="
+                      fill: rgb(64, 123, 255);
+                      opacity: 0.4;
+                      transform-origin: 299.395px 379.108px;
+                    " class="animable"></path>
+              </g>
+            </g>
+            <path
+              d="M319,382.18a3.47,3.47,0,0,1-2,1.62,7,7,0,0,1-.69.23l-.19,0c-6.71,1.75-21.81-1.89-21.81-1.89s-9.89-4.7-10.49-5.81a27.22,27.22,0,0,1-1.11-2.7l-.27-.79s-3.56-2-4-3.56-1.19-2,1-2.28,14,0,14,0l-12.85-5.24s-8.51-4.29-9.3-5.8-1.78-2.51,2.57-1.91,13.85,3.36,13.85,3.36L295.2,359l-7.44-3.17s-14.64-1.77-11.87-6.32h8.31a85.79,85.79,0,0,1,14,1.78c2.42.74,18.42,10.68,18.42,10.68"
+              style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 294.8px 367.008px;
+                " id="elbw2h20krrvr" class="animable"></path>
+            <line x1="282.42" y1="372.88" x2="297.03" y2="375.03" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 289.725px 373.955px;
+                " id="elo9lqqtsk8" class="animable"></line>
+            <path d="M136.78,417.62l36.62,11,67-15.29S199.48,401.71,199.1,402,136.78,417.62,136.78,417.62Z" style="
+                  fill: rgb(64, 123, 255);
+                  transform-origin: 188.59px 415.307px;
+                " id="el8ar91xzjjam" class="animable"></path>
+            <g style="
+                  clip-path: url('#freepik--clip-path-6--inject-4');
+                  transform-origin: 188.59px 415.307px;
+                " id="el2lya8iwbe1" class="animable">
+              <g id="elith17shccx">
+                <path d="M136.78,417.62l36.62,11,67-15.29S199.48,401.71,199.1,402,136.78,417.62,136.78,417.62Z" style="
+                      fill-opacity: 0.7;
+                      opacity: 0.3;
+                      transform-origin: 188.59px 415.307px;
+                    " class="animable"></path>
+              </g>
+            </g>
+            <path d="M136.78,417.62l36.62,11,67-15.29S199.48,401.71,199.1,402,136.78,417.62,136.78,417.62Z" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 188.59px 415.307px;
+                " id="elfph7dazy716" class="animable"></path>
+            <path d="M137.31,404.72c-2.57.18-3.21,9.44-.53,12.9l59.16-12.28,4.74-11.22Z" style="
+                  fill: rgb(64, 123, 255);
+                  transform-origin: 167.866px 405.87px;
+                " id="eljdyiaxpdqoi" class="animable"></path>
+            <g style="
+                  clip-path: url('#freepik--clip-path-7--inject-4');
+                  transform-origin: 167.866px 405.87px;
+                " id="elrz6muskei6" class="animable">
+              <g id="el9e85em4xrfn">
+                <path d="M137.31,404.72c-2.57.18-3.21,9.44-.53,12.9l59.16-12.28,4.74-11.22Z" style="
+                      fill-opacity: 0.7;
+                      opacity: 0.3;
+                      transform-origin: 167.866px 405.87px;
+                    " class="animable"></path>
+              </g>
+            </g>
+            <path d="M137.31,404.72c-2.57.18-3.21,9.44-.53,12.9l59.16-12.28,4.74-11.22Z" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 167.866px 405.87px;
+                " id="elx30itrly86s" class="animable"></path>
+            <path d="M237.53,404.59s-.88,4.87-.31,7.87l-63.89,14.46L139.65,417s-3.5-6.19-.45-11l61.54-10.45Z" style="
+                  fill: rgb(255, 255, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 187.741px 411.235px;
+                " id="elzwtj7x8ypi" class="animable"></path>
+            <polygon points="137.31 404.72 200.68 394.12 240.03 404.09 173.85 417.28 137.31 404.72" style="
+                  fill: rgb(64, 123, 255);
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 188.67px 405.7px;
+                " id="el0h4iunfihruu" class="animable"></polygon>
+            <polyline points="139.56 410.64 173.07 420.62 227.92 409.58" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 183.74px 415.1px;
+                " id="ela7v39a3l1bi" class="animable"></polyline>
+            <line x1="237.04" y1="410.6" x2="178.06" y2="423.18" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 207.55px 416.89px;
+                " id="ell1e8ohpeyk" class="animable"></line>
+            <path d="M140.35,414.57c.51.05,25.26,7.67,25.26,7.67" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 152.98px 418.405px;
+                " id="elwyd3zh7gisp" class="animable"></path>
+            <line x1="232.22" y1="408.29" x2="236.91" y2="407.53" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 234.565px 407.91px;
+                " id="el0z5dh1k6cop" class="animable"></line>
+            <line x1="171.98" y1="424.09" x2="169.49" y2="423.53" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 170.735px 423.81px;
+                " id="elymwxgzajka" class="animable"></line>
+            <path d="M139.2,406a8.82,8.82,0,0,1,.45,11A10.41,10.41,0,0,1,139.2,406Z" style="
+                  fill: rgb(38, 50, 56);
+                  transform-origin: 139.601px 411.5px;
+                " id="elwsddehkt2me" class="animable"></path>
+            <g style="
+                  clip-path: url('#freepik--clip-path-8--inject-4');
+                  transform-origin: 139.601px 411.5px;
+                " id="elnmwabn4wj9g" class="animable">
+              <g id="elo9zipsxgxfj">
+                <path d="M139.2,406a8.82,8.82,0,0,1,.45,11A10.41,10.41,0,0,1,139.2,406Z" style="
+                      fill: rgb(255, 255, 255);
+                      fill-opacity: 0.7;
+                      opacity: 0.3;
+                      transform-origin: 139.601px 411.5px;
+                    " class="animable"></path>
+              </g>
+            </g>
+            <path d="M139.2,406a8.82,8.82,0,0,1,.45,11A10.41,10.41,0,0,1,139.2,406Z" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 139.601px 411.5px;
+                " id="el3c5oupx8omr" class="animable"></path>
+            <polygon points="276.07 420.62 340.02 423.24 333.79 445.25 255.12 442.25 276.07 420.62" style="
+                  fill: rgb(255, 255, 255);
+                  transform-origin: 297.57px 432.935px;
+                " id="elb7ugi5wm1q" class="animable"></polygon>
+            <g style="
+                  clip-path: url('#freepik--clip-path-9--inject-4');
+                  transform-origin: 297.57px 432.935px;
+                " id="elcigpuuo20aj" class="animable">
+              <g id="elijr8lf9vvlr">
+                <polygon points="276.07 420.62 340.02 423.24 333.79 445.25 255.12 442.25 276.07 420.62" style="
+                      fill: rgb(64, 123, 255);
+                      opacity: 0.4;
+                      transform-origin: 297.57px 432.935px;
+                    " class="animable"></polygon>
+              </g>
+            </g>
+            <polygon points="276.07 420.62 340.02 423.24 333.79 445.25 255.12 442.25 276.07 420.62" style="
+                  fill: none;
+                  stroke: rgb(38, 50, 56);
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  transform-origin: 297.57px 432.935px;
+                " id="eltenph8vzsmi" class="animable"></polygon>
+          </g>
+        </svg>
+
+        <p class="pretty mb-16 text-lg text-gray-500 leading-loose">
+          At Whizzy, we believe in fostering trust and credibility through
+          creative talent development and training. By understanding our
+          company philosophy, clients can see how our commitment to nurturing
+          emerging talent builds trust and reliability.
+        </p>
+        <!--  <div class="h-112 mb-16">
+
+          <img class="w-full h-full object-cover rounded-lg fade-in"
+            src="public/images/photo-1677442135703-1787eea5ce01.webp"
+            alt="Decorative image to visually complement the text" />
+        </div> -->
+        <p class="pretty mb-16 text-lg text-gray-500 leading-loose">
+          We are committed to creating the best products through teamwork and
+          individual empowerment. We prioritize understanding real-world
+          problems and fostering periods of reflection and innovation.
+          Whizzy&apos;s team of specialists and generalists works tirelessly
+          to simplify complex tasks and make a meaningful impact on various
+          industries. Additionally, we are dedicated to giving back to our
+          communities by supporting subcultural artists and projects.
+        </p>
+        <p class="pretty mb-4 text-lg text-gray-500 leading-loose">
+          Our aim is to establish &quot;Whizzy&quot; as the go-to solution for
+          effortless tabular data management, akin to Google&apos;s dominance
+          in search and GitHub&apos;s role in open source. Through our
+          comprehensive trainee program, individuals are equipped with the
+          skills and mindset necessary to excel as UX designers, programmers,
+          data experts, and project facilitators. The revenue generated from
+          our consulting and migration projects directly fuels our product
+          development efforts, ensuring continuous innovation and improvement.
+          Ultimately, we strive to provide cost-effective alternatives to
+          traditional consulting services, making automation and collaboration
+          accessible to all. Join us in simplifying complexity and shaping the
+          future of data-driven solutions with Whizzy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° Quote -->
+
+  <section class="pb-40 ">
+    <div class="container px-4 mx-auto">
+      <div class="max-w-7xl mx-auto">
+        <div class="relative py-12 mb-6 rounded-lg bg-blue-500 px-6 lg:px-24">
+          <span class="absolute top-0 left-0 ml-8 mt-8 lg:mt-10">
+            <svg width="30" height="25" viewbox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+              <path
+                d="M7.24 24.544C4.97867 24.544 3.272 23.7333 2.12 22.112C1.01067 20.448 0.456 18.144 0.456 15.2C0.456 12 1.26667 9.184 2.888 6.752C4.50933 4.27733 7.02667 2.22933 10.44 0.607998L12.744 5.344C10.696 6.24 9.16 7.34933 8.136 8.672C7.112 9.952 6.6 11.552 6.6 13.472C6.728 13.4293 6.94133 13.408 7.24 13.408C8.776 13.408 10.0773 13.8773 11.144 14.816C12.2107 15.7547 12.744 17.0347 12.744 18.656C12.744 20.448 12.232 21.8773 11.208 22.944C10.184 24.0107 8.86133 24.544 7.24 24.544ZM23.88 24.544C21.6187 24.544 19.912 23.7333 18.76 22.112C17.6507 20.448 17.096 18.144 17.096 15.2C17.096 12 17.9067 9.184 19.528 6.752C21.1493 4.27733 23.6667 2.22933 27.08 0.607998L29.384 5.344C27.336 6.24 25.8 7.34933 24.776 8.672C23.752 9.952 23.24 11.552 23.24 13.472C23.368 13.4293 23.5813 13.408 23.88 13.408C25.416 13.408 26.7173 13.8773 27.784 14.816C28.8507 15.7547 29.384 17.0347 29.384 18.656C29.384 20.448 28.872 21.8773 27.848 22.944C26.824 24.0107 25.5013 24.544 23.88 24.544Z"
+                fill="#ffffff"></path>
+            </svg>
+          </span>
+          <p class="text-lg leading-loose text-white mobile-mt-2">
+            With over 15 years of IT expertise, we specialize in Microsoft 365 and SharePoint, focusing on digital
+            collaboration
+            through deployment and integration. We also develop mobile apps and cross-platform intranet solutions,
+            emphasizing
+            business process automation and seamless data integration. Our background in Excel, VBA, and open-source
+            frameworks
+            enables us to deliver innovative, efficient solutions for your business.
+          </p>
+        </div>
+        <p class="text-center text-lg text-gray-500">
+          Karsten Held, CEO &amp; Founder at WhizzyApps
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- °° Footer -->
+
+  <section class="py-20 bg-blue-900">
+    <div class="container px-4 mx-auto mobile-text">
+      <div class="flex flex-wrap justify-between items-center -mx-4">
+        <div class="w-1/2 px-4 mb-4 lg:mb-0">
+          <a class="svg-logo-footer" href="index.html" aria-label="Go to Homescreen">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1"
+              viewBox="0 0 200 33.87">
+              <polygon points="29.13 .06 29.13 .06 29.13 .06 29.13 .06" />
+              <path
+                d="M38.52,10.28c-1.7.2-3.32.9-4.64,2.01-.98.82-1.8,1.86-2.36,3.1l-8.06,17.6c4.45,2.04,9.71.08,11.75-4.37l8.06-17.6c-1.54-.7-3.18-.93-4.74-.74Z" />
+              <path
+                d="M29.13.06c-1.7.2-3.32.9-4.64,2.01-.98.82-1.8,1.86-2.36,3.1,0,0-12.73,27.83-12.73,27.83,1.54.7,3.18.93,4.74.74,1.7-.2,3.32-.9,4.64-2.01.98-.82,1.8-1.86,2.36-3.1,0,0,12.73-27.83,12.73-27.83-1.54-.7-3.18-.93-4.74-.74Z" />
+              <path
+                d="M11.75,18.42L19.8.81c-4.45-2.04-9.71-.08-11.75,4.37L0,22.79c1.54.7,3.17.93,4.74.74,1.71-.2,3.32-.9,4.64-2.01.98-.82,1.8-1.86,2.37-3.1Z" />
+              <path
+                d="M137.57,10.13c-2.15,4.32-4.35,8.64-6.58,12.95-.13-4.32-.26-8.64-.39-12.95h-29.29c-.31,1.04-.62,2.07-.94,3.11h7.61c-4.01,4.1-8.09,8.19-12.24,12.29,1.58-5.13,3.14-10.26,4.67-15.4h-4.44c-1.68,5.54-3.4,11.08-5.15,16.61h32.57c.27-1.03.54-2.05.81-3.08h-7.99l10.28-10.48c.22,4.52.45,9.04.68,13.56h1.44c-1.03,2.2-2.96,3.69-5.26,3.69-.59,0-1.18-.03-1.7-.29-.47,1.08-.94,2.16-1.42,3.24.9.39,2.11.49,2.9.49,3.9,0,6.58-2.17,10.14-8.42,2.92-5.11,5.78-10.21,8.58-15.32h-4.28ZM102.99,23.67l10.43-10.43h0c2.54,0,5.08,0,7.63,0-3.35,3.48-6.75,6.95-10.19,10.43h-7.86Z" />
+              <path
+                d="M164.85,9.84c-2.75,0-5.6.81-7.55,1.36-.95,4.34-1.93,8.69-2.92,13.03-.63-6.37-1.25-12.75-1.87-19.12h-5.01c-4.05,7.21-8.22,14.42-12.53,21.63h4.81c.95-1.71,1.89-3.41,2.82-5.12h6.92c.16,1.71.31,3.41.47,5.12h3.82c-.53,2.3-1.07,4.6-1.61,6.9h4.49c.52-2.28,1.04-4.56,1.56-6.83,1.03.19,2.06.36,2.94.36,6.06,0,8.72-4.21,9.68-8.94,1.34-6.7-2.06-8.39-6.01-8.39ZM144.51,18.1c1.5-2.84,2.98-5.68,4.44-8.52.11,2.84.23,5.68.34,8.52h-4.78ZM166.4,18.2c-.67,3.27-2.39,5.34-5.16,5.34-.65,0-1.39-.1-2.18-.36.7-3.16,1.4-6.33,2.08-9.49.99-.26,1.86-.32,2.57-.32,2.5,0,3.35,1.72,2.7,4.83Z" />
+              <path
+                d="M180.53,9.84c-2.75,0-5.58.81-7.51,1.36-1.47,7.48-3,14.96-4.59,22.44h4.49c.47-2.28.94-4.56,1.4-6.83,1.03.19,2.07.36,2.95.36,6.06,0,8.62-4.21,9.47-8.94,1.18-6.7-2.25-8.39-6.21-8.39ZM182.27,18.2c-.6,3.27-2.27,5.34-5.04,5.34-.65,0-1.39-.1-2.19-.36.63-3.16,1.25-6.33,1.86-9.49.98-.26,1.85-.32,2.56-.32,2.5,0,3.39,1.72,2.81,4.83Z" />
+              <path
+                d="M194.86,13.37c1.54,0,3.32.45,3.98.78.39-1.13.77-2.27,1.16-3.4-1.1-.49-2.52-.94-4.79-.94-3.86,0-6.62,1.52-7.27,5.15-.51,2.88,1.82,3.92,3.97,4.92,1.36.65,2.57,1.2,2.38,2.33-.22,1.23-1.34,1.52-2.71,1.52-1.83,0-4-.71-4.73-.97-.45,1.12-.89,2.25-1.34,3.37.92.52,3.24,1.04,5.37,1.04,4.68,0,7.17-1.98,7.76-5.44.44-2.88-1.88-3.76-3.75-4.53-1.49-.62-2.91-1.26-2.72-2.4.18-1.1,1.35-1.42,2.7-1.42Z" />
+              <path
+                d="M89.1,9.75c-1.44,0-3.24.26-5.36.94.6-1.86,1.2-3.71,1.79-5.57h-4.44c-2.34,7.21-4.74,14.42-7.19,21.63h4.58c1.4-4.2,2.78-8.4,4.14-12.6,1.13-.36,2.44-.65,3.47-.65,1.35,0,2.27.39,1.57,2.62-1.13,3.54-2.27,7.08-3.42,10.62h4.74c1.22-3.81,2.42-7.62,3.6-11.43,1.23-3.98-.26-5.57-3.48-5.57Z" />
+              <path d="M102,5.12h-4.41c-.32,1.05-.63,2.09-.95,3.14h4.43c.31-1.05.62-2.09.93-3.14Z" />
+              <path
+                d="M75.58,5.12c-1.81,5.44-3.65,10.87-5.53,16.31,0,0,0,.01,0,.02.04-5.44.09-10.88.14-16.32h-4.32c-2.38,5.44-4.79,10.88-7.26,16.32,0,0,0-.01,0-.02.62-5.44,1.25-10.87,1.86-16.31h-3.75c-.86,7.21-1.72,14.42-2.59,21.63h5.93c2.17-4.88,4.3-9.76,6.4-14.64-.11,4.88-.21,9.76-.31,14.64h5.93c2.48-7.21,4.9-14.42,7.26-21.63h-3.75Z" />
+            </svg>
+          </a>
+        </div>
+        <div class="w-full px-4 lg:w-1/2 flex flex-wrap items-center lg:justify-end text-white">
+          <ul class="w-full lg:w-auto inline-flex md:mx-4 flex-wrap mb-4 lg:mb-0 lg:mr-12 ul-link-animation-w">
+            <li class="mr-6 mb-2 md:mb-0">
+              <a class="text-sm" href="#about" aria-label="Scroll to About Section">
+                About
+              </a>
+            </li>
+            <li class="mr-6 mb-2 md:mb-0">
+              <a class="text-sm" href="#services" aria-label="Scroll to Services Section">
+                Services
+              </a>
+            </li>
+            <li class="mr-6 mb-2 md:mb-0">
+              <a class="text-sm" href="#solutions" aria-label="Scroll to Solutions Section">
+                Solutions
+              </a>
+            </li>
+            <li class="mr-6 mb-2 md:mb-0">
+              <a class="text-sm" href="#philosophy" aria-label="Scroll to Philosophy Section">
+                Philosophy
+              </a>
+            </li>
+            <li class="mr-6 mb-2 md:mb-0">
+              <a class="text-sm" href="#trainee" aria-label="Scroll to Trainee program Section">
+                Trainee Program
+              </a>
+            </li>
+            <li class="mb-2 md:mb-0">
+              <a class="trigger text-sm" data-type="html" data-src="imprint.html" href="#"
+                aria-label="Imprint information">
+                Imprint
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
 </html>
